@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de datos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <h1>Base de datos</h1>
+        <h3>Id</h3>
+        <input type="number" id="input_id">
+        <h3>Nombre</h3>
+        <input type="text" id="input_nom">
+        <div>
+            <button id="btn_ins">Insertar datos </button>
+            <button id="btn_cons">Consultar datos</button>
+        </div>
+        <div>
+            <button id="btn_act">Actualizar datos</button>
+            <button id="btn_elim">Eliminar datos</button>
+        </div>
+        <h3 id="aviso"></h3>
+    </form>
+    <div id="div_tbl" style="display: none;">
+        <table >
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nombre</td>
+                </tr>
+            </thead>
+            <tbody id="tbl_body">
+
+            </tbody>
+        </table>
+        <button id="ocult">Ocultar</button>
+    </div>
+</body>
+<script src="js/usuarios.js"></script>
+</html>
