@@ -3,40 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de datos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Registro de Usuarios</title>
+    <!-- Bootstrap CSS-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/usuarios.css">
 </head>
-<body>
-    <form>
-        <h1>Base de datos</h1>
-        <h3>Id</h3>
-        <input type="number" id="input_id">
-        <h3>Nombre</h3>
-        <input type="text" id="input_nom">
-        <div>
-            <button id="btn_ins">Insertar datos </button>
-            <button id="btn_cons">Consultar datos</button>
-        </div>
-        <div>
-            <button id="btn_act">Actualizar datos</button>
-            <button id="btn_elim">Eliminar datos</button>
-        </div>
-        <h3 id="aviso"></h3>
-    </form>
-    <div id="div_tbl" style="display: none;">
-        <table >
-            <thead>
-                <tr>
-                    <td>Id</td>
-                    <td>Nombre</td>
-                </tr>
-            </thead>
-            <tbody id="tbl_body">
 
-            </tbody>
-        </table>
-        <button id="ocult">Ocultar</button>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Registro de Usuarios</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="formulario" class="center flex">
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="id" name="id" placeholder="ID" required>
+                                <label for="id">ID</label>
+                            </div>
+                            
+                            <div class="form-floating">
+                                
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                                <label for="nombre">Nombre</label>
+                            </div>
+                            <button type="button" class="btn btn-outline-primary btn-block mt-3" id="agregarBtn">Agregar</button>
+                        </form>
+                        <button class="btn btn-outline-secondary btn-block mt-3" id="verUsuariosBtn">Ver Usuarios</button>
+                        <ul class="list-group mt-3" id="listaRegistros"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/usuarios.js">
+
+    </script>
 </body>
-<script src="js/usuarios.js"></script>
+
 </html>
