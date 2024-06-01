@@ -1,5 +1,5 @@
 async function fetchUsuarios() {
-    const response = await fetch('http://localhost:3000/');
+    const response = await fetch('https://api-topicos-kra1.onrender.com/');
     const usuario = await response.json();
     const listaRegistros = document.getElementById('listaRegistros');
     listaRegistros.innerHTML = '';
@@ -13,7 +13,7 @@ async function fetchUsuarios() {
         deleteBtn.className = 'btn btn-danger btn-sm';
         deleteBtn.addEventListener('click', async () => {
             try {
-                const response = await fetch('http://localhost:3000/', {
+                const response = await fetch('https://api-topicos-kra1.onrender.com/', {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ document.getElementById('agregarBtn').addEventListener('click', async () => {
     
     
     const Nombre = document.getElementById('nombre').value;
-    const response = await fetch('http://localhost:3000/', {
+    const response = await fetch('https://api-topicos-kra1.onrender.com/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
