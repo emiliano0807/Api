@@ -1,7 +1,7 @@
 const url='http://localhost:3000';
 const url2='https://api-topicos-kra1.onrender.com/';
 async function fetchUsuarios() {
-    const response = await fetch(url);
+    const response = await fetch(url2);
     const usuario = await response.json();
     const listaRegistros = document.getElementById('listaRegistros');
     listaRegistros.innerHTML = '';
@@ -17,7 +17,7 @@ async function fetchUsuarios() {
         deleteBtn.className = 'btn btn-danger btn-sm';
         deleteBtn.addEventListener('click', async () => {
             try {
-                const response = await fetch(url, {
+                const response = await fetch(url2, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ async function fetchUsuarios() {
         const newName = prompt('Nuevo nombre:', usuarios.Nombre);
             if (newName && newName !== usuarios.Nombre) {
                 try {
-                    const response = await fetch(url, {
+                    const response = await fetch(url2, {
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ async function fetchUsuarios() {
 //Agregar usuarios
 document.getElementById('agregarBtn').addEventListener('click', async () => {
     const Nombre = document.getElementById('nombre').value;
-    const response = await fetch(url, {
+    const response = await fetch(url2, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
